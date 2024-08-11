@@ -10,12 +10,15 @@ dependencies:
   connectivity_plus: ^6.0.4
   flutter:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
   flutter_svg: ^2.0.10+1
+  fluttertoast: ^8.2.5
   google_fonts: ^6.2.1
   html: ^0.15.4
   http: ^1.2.2
   provider: ^6.1.2
-
+  flutter_native_splash:
+  rename: ^3.0.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -29,3 +32,13 @@ flutter:
     - family: Rubik
       fonts:
         - asset: assets/fonts/Rubik-VariableFont_wght.ttf
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  remove_alpha_ios: true
+# flutter_native_splash
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/icon/icon.png
+  color_dark: "#121212"

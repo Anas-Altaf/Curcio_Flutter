@@ -1,5 +1,3 @@
-import 'dart:io';
-
 double processNumber(String input) {
   // Remove any spaces from the input
   input = input.replaceAll(' ', '');
@@ -38,21 +36,21 @@ String _normalizeNumber(String input) {
   // Combine integer and decimal parts
   return '$integerPart.$decimalPart';
 }
-
-void main() {
-  print('Enter a number with potential multiple decimal points:');
-
-  // Read input from the user
-  String? input = stdin.readLineSync();
-
-  if (input != null && input.isNotEmpty) {
-    try {
-      double result = processNumber(input);
-      print('The valid double is: $result');
-    } catch (e) {
-      print('Error processing number: $e');
-    }
-  } else {
-    print('No input provided.');
-  }
-}
+//
+// void main() {
+//   //print('Enter a number with potential multiple decimal points:');
+//
+//   // Read input from the user
+//   String? input = stdin.readLineSync();
+//
+//   if (input != null && input.isNotEmpty) {
+//     try {
+//       double result = processNumber(input);
+//       //print('The valid double is: $result');
+//     } catch (e) {
+//       print('Error processing number: $e');
+//     }
+//   } else {
+//     print('No input provided.');
+//   }
+// }

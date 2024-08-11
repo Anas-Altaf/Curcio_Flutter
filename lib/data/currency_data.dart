@@ -43,7 +43,7 @@ class CurrencyData extends ChangeNotifier {
 
   set setApiStatus(int statusCode) {
     _apiStatus = statusCode;
-    print('🌟Status Code :$_apiStatus');
+    //print('🌟Status Code :$_apiStatus');
     notifyListeners();
   }
 

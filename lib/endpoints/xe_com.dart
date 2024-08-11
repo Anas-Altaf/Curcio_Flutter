@@ -28,30 +28,30 @@ class FetchExchangeData {
           final rateText = element.text.split(' ')[0].replaceAll(',', '');
           return double.tryParse(rateText);
         } else {
-          print('Conversion rate not found.');
+          //  print('Conversion rate not found.');
         }
       } else {
-        print('Error: ${response.statusCode}');
+        //  print('Error: ${response.statusCode}');
       }
     } catch (e) {
-      print('Error: $e');
+      // print('Error: $e');
     }
     return null;
   }
 }
-
-void main() async {
-  FetchExchangeData fetchExchangeData = FetchExchangeData();
-  final fromCurrency = 'USD';
-  final toCurrency = 'PKR';
-  final amount = '1000';
-  final rate = await fetchExchangeData.fetchExchangeRate(
-      fromCurrency: fromCurrency, toCurrency: toCurrency, amount: amount);
-  if (rate != null) {
-    print('$amount $fromCurrency = $rate $toCurrency');
-  } else {
-    print('Failed to fetch exchange rate.');
-  }
-}
-//For Flags
-///https://www.xe.com/svgs/flags/pkr.static.svg
+//
+// void main() async {
+//   FetchExchangeData fetchExchangeData = FetchExchangeData();
+//   final fromCurrency = 'USD';
+//   final toCurrency = 'PKR';
+//   final amount = '1000';
+//   final rate = await fetchExchangeData.fetchExchangeRate(
+//       fromCurrency: fromCurrency, toCurrency: toCurrency, amount: amount);
+//   if (rate != null) {
+//    // print('$amount $fromCurrency = $rate $toCurrency');
+//   } else {
+//   //  print('Failed to fetch exchange rate.');
+//   }
+// }
+// //For Flags
+// ///https://www.xe.com/svgs/flags/pkr.static.svg

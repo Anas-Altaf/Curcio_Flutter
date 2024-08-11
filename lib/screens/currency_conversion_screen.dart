@@ -289,7 +289,7 @@ List<DropdownMenuItem<String>> getCurrencyListDropDown(
                   currencyName,
                   style: const TextStyle(
                     fontSize: 12,
-                    color: Colors.grey,
+                    color: kCurrencyTextFieldBorderColor,
                   ),
                 ),
               ],
@@ -316,16 +316,11 @@ class CurrencyDropDownButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DropdownButton<String>(
-      underline: Text(
-        currencyMap[currentValue]!,
-        style: const TextStyle(
-          color: Colors.grey,
-        ),
-      ),
+      underline: const Text(''),
       alignment: Alignment.topLeft,
       borderRadius: BorderRadius.circular(10.0),
       style: TextStyle(
-        fontSize: 23,
+        fontSize: 20,
         color: Colors.grey.shade800,
         fontWeight: FontWeight.w500,
       ),
@@ -335,16 +330,29 @@ class CurrencyDropDownButton extends StatelessWidget {
       onChanged: dropDownValueChangeCallBack,
       selectedItemBuilder: (BuildContext context) {
         // This defines how the selected item appears (only the code without the image)
-        return currencyMap.keys.map<Widget>((String value) {
-          return Text(
-            value,
-            style: const TextStyle(
-              color: Colors.black,
-            ),
+        return currencyMap.entries.map<Widget>((entry) {
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                entry.value,
+                style: const TextStyle(
+                  color: Colors.grey,
+                  fontSize: 12,
+                ),
+              ),
+              Text(
+                entry.key,
+                style: const TextStyle(
+                  color: Colors.black87,
+                ),
+              ),
+            ],
           );
         }).toList();
       },
       dropdownColor: Colors.white,
+      menuWidth: 200,
       itemHeight: null,
       isExpanded: true,
     );

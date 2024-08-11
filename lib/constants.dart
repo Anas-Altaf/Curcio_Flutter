@@ -13,4 +13,4 @@ const kCurrencyRateDisplayTextStyle = TextStyle(
   overflow: TextOverflow.fade,
 );
 //Models
-const kStatusIndicatorColor = Color(0xFF00FF05);
+const kStatusIndicatorColor = Colors.greenAccent; //Color(0xFF00FF05);

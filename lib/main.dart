@@ -35,8 +35,8 @@ class MainApp extends StatelessWidget {
           ),
           scaffoldBackgroundColor: kMainBlueColor,
         ),
-        home: SafeArea(
-          child: const CurrencyNumPadScreen(),
+        home: const SafeArea(
+          child: CurrencyNumPadScreen(),
         ),
       ),
     );
