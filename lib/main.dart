@@ -9,11 +9,15 @@ import 'package:provider/provider.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: kMainBlueColor, // Change this to your desired color
-    statusBarIconBrightness: Brightness.light, // For light icons
+    statusBarColor: kMainBlueColor,
+    statusBarIconBrightness: Brightness.light,
   ));
-
-  runApp(const MainApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((_) {
+    runApp(const MainApp());
+  });
+  // runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
